@@ -1,6 +1,4 @@
-Note that offline compaction requires a long duration of downtime from 30 minutes to 7 hours (and in extreme cases more time).
-
-Offline Oak compaction with debug logging:
+#Offline countNodes using oak-run:
 
 1. Download the oak-run version matching your oak version: https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/
   * AEM6.0 - use oak-run 1.0.x - if you have Oak 1.0.11 or earlier installed in AEM then use oak-run 1.0.11 otherwise use the version that matches the installed on in AEM.
