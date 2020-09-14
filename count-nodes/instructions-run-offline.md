@@ -7,7 +7,9 @@
   * AEM6.3 - use latest oak-run 1.6.x version
   * AEM6.4 - use latest oak-run 1.8.x version
   * AEM6.5 - use latest oak-run 1.10.x version
-2. Download the countNodes-offline-oakRun\*.groovy  script corresponding to your version of Oak.
+2. Download the countNodes-offline-oakRun\*.groovy script corresponding to your version of Oak:
+  * [countNodes-offline-oakRun14andOlder.groovy] - AEM 6.3 and older
+  * Or [countNodes-offline-oakRun18andLater.groovy] - AEM 6.4 and newer
 3. Upload the oak-run jar and groovy file to your server that has AEM on it.
 4. If you are on AEM 6.3 or older then stop AEM.
 5. Run this command from the same directory as the AEM oak-run jar file (change user id from crx to the AEM java process' user, change the paths and jar file name to match your system’s, replace countNodes-offline-oakRun\*.groovy to the path of the groovy file you uploaded in step 3 above): 
