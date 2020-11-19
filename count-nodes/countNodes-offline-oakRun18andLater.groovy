@@ -76,4 +76,4 @@ def countNodes(n, deep = false, String path = "/", Integer flush = 100000, Atomi
   return cnt
 }
 
-
+countNodes(session.workingNode)
