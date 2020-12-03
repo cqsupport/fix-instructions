@@ -1,4 +1,4 @@
-# Overview
+# Analyze Disk Usage of Apache Jackrabbit Oak Repositories
 The calculateDiskUsage script will analyze the disk usage of an Oak repository at a low level.  It scans all nodes and properties including datastore binaries and calculates the size of the nodes.
 This is useful when analyzing [rapid disk usage increases](https://helpx.adobe.com/experience-manager/kb/analyze-unusual-repository-growth.html) or when trying to reduce repository size of Apache Jackrabbit Oak instances.
 
