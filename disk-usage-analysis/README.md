@@ -1,3 +1,5 @@
+The calculateDiskUsage script will analyze the disk usage of an Oak repository at a low level.  It scans all nodes and properties including datastore binaries and calculates the size of the nodes.
+
 1. Download these two jars and install them to the /system/console/bundles UI
     * https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.1.6/groovy-all-2.1.6.jar
     * http://apache.mirrors.tds.net/felix/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
