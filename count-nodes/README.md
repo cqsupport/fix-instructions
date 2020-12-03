@@ -1,5 +1,5 @@
 # Traverse and Count All Nodes in an Apache Jackrabbit Oak Repository
-The count nodes script for Oak repository will count the number of nodes.  It traverses the whole repository including all hidden nodes under /oak:index.  This is useful to find any data corruptions (e.g. SegmentNotFoundException in the case of Tar SegmentNodeStore (aka TarMK).
+The count nodes script for Oak repository will count the number of nodes.  It traverses the whole repository including all hidden nodes under /oak:index finding any data corruptions along the way (e.g. SegmentNotFoundException in the case of Tar SegmentNodeStore, aka TarMK).
 
 This is useful for fixing issues such as these:
 1. https://helpx.adobe.com/experience-manager/kb/offline-compaction-fails-with-SegmentNotFoundException-and-IllegalArgumentException.html
