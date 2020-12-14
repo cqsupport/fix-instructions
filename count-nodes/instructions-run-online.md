@@ -8,7 +8,7 @@
 5. Save the log file config
 6. Go to http://host:port/system/console/sc
 7. Select "Groovy" as the language
-8. Copy/Paste the contents of [countNodes-oak16andLater.groovy](count-nodes/countNodes-oak16andLater.groovy) script below which matches your oak version to the script console
+8. Copy/Paste the contents of [countNodes-oak16andLater.groovy](countNodes-oak16andLater.groovy) script below which matches your oak version to the script console
 9. Click "Execute"
 10. The output will go to crx-quicktstart/logs/countnodes.log
 
