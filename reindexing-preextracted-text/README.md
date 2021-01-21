@@ -45,6 +45,7 @@ Example fulltext enabled lucene indexes in AEM - /oak:index/ntBaseLucene, /oak:i
    2. Click "createCheckpoint(long p1)"
    3. Enter 864000000 and click "Invoke"
    4. Copy the checkpoint id to a text file
+
 1B. OR, stop AEM and create a checkpoint using oak-run console
    1. Run the command below to open an oak-run console shell
       ```
