@@ -41,7 +41,7 @@ Example fulltext enabled lucene indexes in AEM - /oak:index/ntBaseLucene, /oak:i
 ## Create a new checkpoint
 A. Create the checkpoint using the JMX console (if AEM is running)
    1. Go to this URL on the host:
-      /system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager
+      http://host/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager
    2. Click "createCheckpoint(long p1)"
    3. Enter 864000000 and click "Invoke"
    4. Copy the checkpoint id to a text file
