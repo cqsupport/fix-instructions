@@ -60,7 +60,7 @@ B. *OR*, stop AEM and create a checkpoint using oak-run console
    
 ## Run the out-of-band or offline reindex:
 * S3 DataStore systems (include S3 DS jars in the classpath):
-```
+```bash
 nohup java -Xmx2g -classpath ./oak-run-1.22.4.jar:/mnt/preExtraction/jackson-core-2.9.5.jar:/mnt/preExtraction/jackson-annotations-2.9.5.jar:/mnt/preExtraction/jackson-databind-2.9.5.jar:/mnt/crx/author/crx-quickstart/install/15/aws-java-sdk-osgi-1.10.27.jar \
 org.apache.jackrabbit.oak.run.Main index -\
 -reindex --read-write \
@@ -72,7 +72,7 @@ org.apache.jackrabbit.oak.run.Main index -\
 ```
 
 * Azure DS systems (include S3 DS jars in the classpath):
-```
+```bash
 nohup java -Xmx2g -classpath ./oak-run-1.22.4.jar:/mnt/preExtraction/jackson-core-2.9.5.jar:/mnt/preExtraction/jackson-annotations-2.9.5.jar:/mnt/preExtraction/jackson-databind-2.9.5.jar:/mnt/crx/author/crx-quickstart/install/15/aws-java-sdk-osgi-1.10.27.jar \
 org.apache.jackrabbit.oak.run.Main index \
 --reindex --read-write \
