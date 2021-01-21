@@ -74,8 +74,8 @@ org.apache.jackrabbit.oak.run.Main index -\
 * Azure DS systems (include S3 DS jars in the classpath):
 ```
 nohup java -Xmx2g -classpath ./oak-run-1.22.4.jar:/mnt/preExtraction/jackson-core-2.9.5.jar:/mnt/preExtraction/jackson-annotations-2.9.5.jar:/mnt/preExtraction/jackson-databind-2.9.5.jar:/mnt/crx/author/crx-quickstart/install/15/aws-java-sdk-osgi-1.10.27.jar \
-org.apache.jackrabbit.oak.run.Main index -\
--reindex --read-write \
+org.apache.jackrabbit.oak.run.Main index \
+--reindex --read-write \
 --pre-extracted-text-dir /mnt/preExtraction/store \
 --index-paths=/oak:index/socialLucene,/oak:index/authorizables,/oak:index/commerceLucene,/oak:index/cqProjectLucene,/oak:index/cqPageLucene,/oak:index/damAssetLucene,/oak:index/ntBaseLucene,/oak:index/slingeventJob,/oak:index/workflowDataLucene,/oak:index/versionStoreIndex \
 --checkpoint=890f552c-d7b5-459f-8097-8964b3905efd \
