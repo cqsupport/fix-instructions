@@ -38,15 +38,15 @@ Example fulltext enabled lucene indexes in AEM - /oak:index/ntBaseLucene, /oak:i
 4. Click *Save All* on the top left
 5. Monitor reindexing via the error.log file.  See [here](https://helpx.adobe.com/experience-manager/kb/Analyzing-AEM-Indexing-Issues.html) for how to monitor indexing.
 
-## Out-of-band or offline reindexing
-1A. Create a checkpoint using the JMX console if AEM is running
+## Create a new checkpoint
+A. Create the checkpoint using the JMX console (if AEM is running)
    1. Go to this URL on the host:
       /system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+checkpoint+management%2Ctype%3DCheckpointManager
    2. Click "createCheckpoint(long p1)"
    3. Enter 864000000 and click "Invoke"
    4. Copy the checkpoint id to a text file
 
-1B. OR, stop AEM and create a checkpoint using oak-run console
+B. *OR*, stop AEM and create a checkpoint using oak-run console
    1. Run the command below to open an oak-run console shell
       ```
       java -Xmx2g -jar -oak-run-1.22.4.jar console /mnt/crx/author/crx-quickstart/repository/segmentstore
@@ -58,8 +58,8 @@ Example fulltext enabled lucene indexes in AEM - /oak:index/ntBaseLucene, /oak:i
    3. Copy the checkpoint id to a text file
    4. Enter command ```:exit``` or hit _\[Ctrl]+c_ to close the shell
    
-2. Run the out-of-band or offline reindex:
-For S3 DataStore systems (include S3 DS jars in the classpath):
+## Run the out-of-band or offline reindex:
+* S3 DataStore systems (include S3 DS jars in the classpath):
 ```
 nohup java -Xmx2g -classpath ./oak-run-1.22.4.jar:/mnt/preExtraction/jackson-core-2.9.5.jar:/mnt/preExtraction/jackson-annotations-2.9.5.jar:/mnt/preExtraction/jackson-databind-2.9.5.jar:/mnt/crx/author/crx-quickstart/install/15/aws-java-sdk-osgi-1.10.27.jar \
 org.apache.jackrabbit.oak.run.Main index -\
@@ -71,7 +71,7 @@ org.apache.jackrabbit.oak.run.Main index -\
 /mnt/crx/author/crx-quickstart/repository/segmentstore &
 ```
 
-For Azure DS systems (include S3 DS jars in the classpath):
+* Azure DS systems (include S3 DS jars in the classpath):
 ```
 nohup java -Xmx2g -classpath ./oak-run-1.22.4.jar:/mnt/preExtraction/jackson-core-2.9.5.jar:/mnt/preExtraction/jackson-annotations-2.9.5.jar:/mnt/preExtraction/jackson-databind-2.9.5.jar:/mnt/crx/author/crx-quickstart/install/15/aws-java-sdk-osgi-1.10.27.jar \
 org.apache.jackrabbit.oak.run.Main index -\
