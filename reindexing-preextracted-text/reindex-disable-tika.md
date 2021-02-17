@@ -25,7 +25,7 @@ To disable the text extraction entirely, then replace the whole tika-config.xml 
    1. In the AEM Web Console (http://host:port/system/console/bundles) search for 'oak-lucene'.  Note the bundle id in the far left column.  
    2. Or run this command at the file system level to find the bundle's path:
       ```
-      find . -name "bundle.info" -exec grep oak-lucene {} \; -print
+      find crx-quickstart/launchpad/felix -name "bundle.info" -exec grep oak-lucene {} \; -print
       ```
       
 2. Shutdown the AEM instance.
