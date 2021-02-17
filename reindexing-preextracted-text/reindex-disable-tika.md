@@ -1,4 +1,9 @@
-To disable the default Apache Tika configs in AEM:
+# How to disable Apache Jackrabbit Oak Luecene Index text extraction
+
+## Overview
+To reduce the Lucene index sizes in Apache Jackrabbit Oak and Adobe AEM you can follow the steps below.  Disabling text extraction means the text within those files would no longer be searchable after reindexing.  For example you would no longer be able to seearch the contents of PDF documents if you excluded mimetype application/pdf.
+
+## Steps
 
 1. Find the oak-lucene bundle
    1. In the AEM Web Console (http://host:port/system/console/bundles) search for 'oak-lucene'.  Note the bundle id in the far left column.  
