@@ -3,6 +3,22 @@
 ## Overview
 To reduce the Lucene index sizes in Apache Jackrabbit Oak and Adobe AEM you can follow the steps below.  Disabling text extraction means the text within those files would no longer be searchable after reindexing.  For example you would no longer be able to seearch the contents of PDF documents if you excluded mimetype application/pdf.
 
+### Note
+To disable the text extraction entirely, then replace the whole tika-config.xml file with this:
+
+  ```
+  <properties>
+    <detectors>
+      <detector class="org.apache.tika.detect.EmptyDetector"/>
+    </detectors>
+    <parsers>
+      <parser class="org.apache.tika.parser.EmptyParser"/>
+    </parsers>
+    <service-loader initializableProblemHandler="ignore" dynamic="true"/>
+  </properties>
+  ```
+
+
 ## Steps
 
 1. Find the oak-lucene bundle
