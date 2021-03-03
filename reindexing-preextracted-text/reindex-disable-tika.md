@@ -1,4 +1,4 @@
-# How to disable Apache Jackrabbit Oak Luecene Index text extraction for some files
+# How to disable Apache Jackrabbit Oak Lucene Index text extraction for some files
 
 ## Overview
 To reduce the Lucene index sizes in Apache Jackrabbit Oak and Adobe AEM you can follow the steps below.  Disabling text extraction means the text within those files would no longer be searchable after reindexing.  For example you would no longer be able to seearch the contents of PDF documents if you excluded mimetype application/pdf.
