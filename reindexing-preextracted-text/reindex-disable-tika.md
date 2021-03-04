@@ -57,6 +57,8 @@ To disable the text extraction entirely, then replace the whole tika-config.xml 
    <mime>application/zip</mime>
    ```
    
+   Or, replace the whole file with the one [above](#Note) to completely disable text extraction.
+   
 7. Save the changes to the bundle.jar. 
    ```
    jar -uvf bundle.jar org/apache/jackrabbit/oak/plugins/index/lucene/tika-config.xml
