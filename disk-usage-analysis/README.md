@@ -10,7 +10,7 @@ This is useful when analyzing [rapid disk usage increases](https://helpx.adobe.c
     Note: Those two bundles install the groovy script console for apache felix:
     http://felix.apache.org/documentation/subprojects/apache-felix-script-console-plugin.html
 2. Go to http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
-Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
+Add _org.apache.felix.webconsole.plugins.scriptconsole_ to "Whitelist regexp" and save
 3. Go to http://host/system/console/sc
 4. Select "Groovy" as the language
 5. Copy / paste the [calculateDiskUsage.groovy](calculateDiskUsage.groovy) script to the console
