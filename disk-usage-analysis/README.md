@@ -5,7 +5,7 @@ This is useful when analyzing [rapid disk usage increases](https://helpx.adobe.c
 # Instructions
 1. Download these two jars and install them to the /system/console/bundles UI
     * https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.1.6/groovy-all-2.1.6.jar
-    * http://apache.mirrors.tds.net/felix/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
+    * https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
 
     Note: Those two bundles install the groovy script console for apache felix:
     http://felix.apache.org/documentation/subprojects/apache-felix-script-console-plugin.html
