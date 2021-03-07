@@ -19,6 +19,14 @@ and add _org.apache.felix.webconsole.plugins.scriptconsole_ to "Whitelist regexp
 8. Modify the very last line with the path you would like to run it
 countNodes("/")
 
+# Stopping a running script
+If you start the script and want to stop it while it's running you can open a new browser window for /system/console/sc and set this system property:
+```
+System.setProperty("calculateDiskUsage.stop", "true")
+```
+The script would detect the system property, remove the property and stop the script.
+
+
 # Sample Output
 ```
 07.03.2021 08:52:18.105 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy Running node count and size estimate: WARNING - this isn't a perfectly accurate calculation of repository size, it is just an estimation
