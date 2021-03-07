@@ -11,7 +11,7 @@ import java.util.List
 
 
 log = org.slf4j.LoggerFactory.getLogger("calculateDiskUsage.groovy");
-
+stop = false;
 def String humanReadableByteCount(long bytes, boolean si) {
  try {
   int unit = si ? 1000 : 1024;
@@ -29,7 +29,17 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
   log.info("Counting nodes in tree ${path}");
   n = getNodeForPath(n, path);
  }
-
+ if(System.getProperty("calculateDiskUsage.stop") != null) {
+    stop = true;
+    System.clearProperty("calculateDiskUsage.stop");
+    log.info("Stop requested - stopping calculateDiskUsage.groovy");
+    return;
+ } else if(stop) {
+    return;
+ } else {
+    Thread.sleep(1000);
+ }
+ 
  def counts = [bytes: 0, binaryCount: 0, nodeCount: 1]
  cnt = count.incrementAndGet()
  if (cnt % flush == 0) log.info("  " + cnt);
@@ -66,7 +76,9 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
    counts.nodeCount += childCounts.nodeCount
   }
  } catch (e) {
-  log.warn("warning unable to read node ${path}: " + e.getMessage());
+  if(!stop) {
+    log.warn("warning unable to read node ${path}: " + e.getMessage());
+  }
  }
 
  if (root) {
@@ -93,7 +105,9 @@ private long getSizeInBytes(def prop) {
      runningBytes += getSizeOfType(val);
    }
   } catch (Exception e) {
+  if(!stop) {
    log.warn("error reading property " + e.getMessage());
+   }
   }
  } else {
    runningBytes += prop.size();
