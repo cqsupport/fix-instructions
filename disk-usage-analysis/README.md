@@ -16,9 +16,17 @@ and add _org.apache.felix.webconsole.plugins.scriptconsole_ to "Whitelist regexp
 5. Go to http://host/system/console/sc
 6. Select "Groovy" as the language
 7. Copy / paste the [calculateDiskUsage.groovy](calculateDiskUsage.groovy) script to the console
-8. Modify the very last line with the path you would like to run it
-countNodes("/")
-
+8. If you want to throttle the script for running on a live system then modify this line:
+   ```
+   sleepMillis = 0;
+   ```
+   Set sleepMillis to the number of milliseconds to sleep between node iterations.
+   
+9. Modify the very last line with the path you would like to run it
+   ```
+   countNodes("/")
+   ```
+   
 # Stopping a running script
 If you start the script and want to stop it while it's running you can open a new browser window for /system/console/sc and set this system property:
 ```
