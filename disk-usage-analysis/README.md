@@ -11,8 +11,10 @@ This is useful when analyzing [rapid disk usage increases](https://helpx.adobe.c
     http://felix.apache.org/documentation/subprojects/apache-felix-script-console-plugin.html
 2. Go to http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
 and add _org.apache.felix.webconsole.plugins.scriptconsole_ to "Whitelist regexp" and save
-3. Go to http://host/system/console/sc
-4. Select "Groovy" as the language
-5. Copy / paste the [calculateDiskUsage.groovy](calculateDiskUsage.groovy) script to the console
-6. Modify the very last line with the path you would like to run it
+3. Go to http://host:port/system/console/slinglog
+4. Click "Add New Logger" and set log level to "Info", "Log File" to "logs/calculateDiskUsage.log", and "Logger" to "calculateDiskUsage.groovy"
+5. Go to http://host/system/console/sc
+6. Select "Groovy" as the language
+7. Copy / paste the [calculateDiskUsage.groovy](calculateDiskUsage.groovy) script to the console
+8. Modify the very last line with the path you would like to run it
 countNodes("/")
