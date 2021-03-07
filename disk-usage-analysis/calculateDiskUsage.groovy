@@ -1,15 +1,16 @@
-//Adaptation of @stillalex's script from here https://gist.github.com/stillalex/06303f8cc1d3780d3eab4c72575883ae
-//This version works with Oak 1.6 and later versions
 import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicLong
 import javax.jcr.*
- import org.apache.jackrabbit.oak.api.Type
+import org.apache.jackrabbit.oak.api.Type
 import org.apache.jackrabbit.oak.spi.state.NodeState
 import org.apache.jackrabbit.oak.spi.state.NodeStore
 import org.apache.jackrabbit.oak.commons.PathUtils
 import com.google.common.collect.Lists
 import java.util.List
+
+
+log = org.slf4j.LoggerFactory.getLogger("calculateDiskUsage.groovy");
 
 def String humanReadableByteCount(long bytes, boolean si) {
  try {
@@ -19,19 +20,19 @@ def String humanReadableByteCount(long bytes, boolean si) {
   String pre = new String((si ? "kMGTPE" : "KMGTPE").charAt(exp - 1)) + (si ? "" : "");
   return String.format("%.1f %sB", bytes / Math.pow(unit, exp), pre);
  } catch (Exception e) {
-  out.print "humanReadableByteCount: " + e.getMessage()
+  log.warn("humanReadableByteCount: " + e.getMessage());
  }
 }
 
 def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000, AtomicInteger count = new AtomicInteger(0), AtomicInteger binaries = new AtomicInteger(0), root = true, AtomicLong runningBytes = new AtomicLong(0)) {
  if (root) {
-  out.println "Counting nodes in tree ${path}"
+  log.info("Counting nodes in tree ${path}");
   n = getNodeForPath(n, path);
  }
 
  def counts = [bytes: 0, binaryCount: 0, nodeCount: 1]
  cnt = count.incrementAndGet()
- if (cnt % flush == 0) out.println("  " + cnt)
+ if (cnt % flush == 0) log.info("  " + cnt);
  long bytes = 0;
  try {
   for (prop in n.getProperties()) {
@@ -51,7 +52,7 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
     }
    } else {
     bytes = getSizeInBytes(prop)
-    //out.println "Property - " + prop.getName() + ": " + bytes + " bytes"
+    //log.info("Property - " + prop.getName() + ": " + bytes + " bytes");
     counts.bytes += bytes
     runningBytes.getAndAdd(bytes)
    }
@@ -65,18 +66,18 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
    counts.nodeCount += childCounts.nodeCount
   }
  } catch (e) {
-  out.println "warning unable to read node ${path}: " + e.getMessage()
+  log.warn("warning unable to read node ${path}: " + e.getMessage());
  }
 
  if (root) {
   String readableBytes = humanReadableByteCount(counts.bytes, false)
-  out.println "Total nodes in tree ${path}: ${counts.nodeCount}"
-  out.println "Total binaries in tree ${path}: ${counts.binaryCount}"
-  out.println "Total bytes in tree ${path}: ${readableBytes}"
+  log.info("Total nodes in tree ${path}: ${counts.nodeCount}");
+  log.info("Total binaries in tree ${path}: ${counts.binaryCount}");
+  log.info("Total bytes in tree ${path}: ${readableBytes}")
  } else if (level <= 3) {
   String readableBytes = humanReadableByteCount(counts.bytes, false)
   String binaryCnt = binaries.get();
-  out.println "${path}, bytes: ${readableBytes}"
+  log.info("${path}, bytes: ${readableBytes}")
  }
 
  return counts
@@ -92,7 +93,7 @@ private long getSizeInBytes(def prop) {
      runningBytes += getSizeOfType(val);
    }
   } catch (Exception e) {
-   out.println "error reading property " + e.getMessage()
+   log.warn("error reading property " + e.getMessage());
   }
  } else {
    runningBytes += prop.size();
@@ -150,9 +151,9 @@ def countNodes(session, path) {
  NodeStore nstore = session.getRootNode().sessionDelegate.root.store
  def rs = nstore.root
  def ns = rs
- out.println("Running node count and size estimate: WARNING - this isn't a perfectly accurate calculation of repository size, it is just an estimation")
+ log.info("Running node count and size estimate: WARNING - this isn't a perfectly accurate calculation of repository size, it is just an estimation");
  totalBytes = countNodes(ns, 0, path)
- out.println("Done: " + totalBytes)
+ log.info("Done: " + totalBytes)
  null
 }
 
