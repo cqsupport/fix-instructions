@@ -37,41 +37,59 @@ The script would detect the system property, remove the property and stop the sc
 
 # Sample Output
 ```
-07.03.2021 08:52:18.105 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy Running node count and size estimate: WARNING - this isn't a perfectly accurate calculation of repository size, it is just an estimation
-07.03.2021 08:52:18.105 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy Counting nodes in tree /
-07.03.2021 08:52:18.109 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /:async, bytes: 449 B
-07.03.2021 08:52:18.110 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /tmp/social-enablement/rep:policy, bytes: 754 B
-07.03.2021 08:52:18.111 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /tmp/social-enablement, bytes: 829 B
-07.03.2021 08:52:18.111 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /tmp/versionhistory/rep:policy, bytes: 222 B
-07.03.2021 08:52:18.111 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /tmp/versionhistory, bytes: 297 B
-07.03.2021 08:52:18.111 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /tmp/fd/af, bytes: 249 B
-...
-07.03.2021 08:52:18.151 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/socialLucene/:data, bytes: 259 B
-07.03.2021 08:52:18.151 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/socialLucene/:status, bytes: 43 B
-07.03.2021 08:52:18.152 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/socialLucene/:index-definition, bytes: 1.4 KB
-07.03.2021 08:52:18.153 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/socialLucene/indexRules, bytes: 1.3 KB
-07.03.2021 08:52:18.153 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/socialLucene, bytes: 3.1 KB
-07.03.2021 08:52:18.154 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene/:data, bytes: 4.5 KB
-07.03.2021 08:52:18.154 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene/aggregates, bytes: 111 B
-07.03.2021 08:52:18.154 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene/:status, bytes: 43 B
-07.03.2021 08:52:18.155 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene/:index-definition, bytes: 1.8 KB
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene/indexRules, bytes: 1.6 KB
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/workflowDataLucene, bytes: 8.2 KB
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/slingeventJob/:data, bytes: 259 B
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/slingeventJob/:status, bytes: 43 B
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/slingeventJob/:index-definition, bytes: 543 B
-07.03.2021 08:52:18.156 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/slingeventJob/indexRules, bytes: 398 B
-07.03.2021 08:52:18.157 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/slingeventJob, bytes: 1.4 KB
-07.03.2021 08:52:18.158 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/jcrLanguage/:index, bytes: 159 B
-07.03.2021 08:52:18.158 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/jcrLanguage, bytes: 255 B
-07.03.2021 08:52:18.158 *INFO* [qtp1785043953-1310] calculateDiskUsage.groovy /oak:index/versionStoreIndex/:data, bytes: 142.1 KB
+08.03.2021 11:26:04.544 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Running node count and size estimate: WARNING - this isn't a perfectly accurate calculation of repository size, it is just an estimation
+08.03.2021 11:26:04.546 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Counting nodes in tree /
+08.03.2021 11:26:04.548 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /:async, nodes: 1,  binaries: 0, bytes: 710, bytes: 710 B
+08.03.2021 11:26:04.549 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/social-enablement/rep:policy, nodes: 4,  binaries: 0, bytes: 754, bytes: 754 B
+08.03.2021 11:26:04.549 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/social-enablement, nodes: 5,  binaries: 0, bytes: 829, bytes: 829 B
+08.03.2021 11:26:04.549 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/versionhistory/rep:policy, nodes: 2,  binaries: 0, bytes: 222, bytes: 222 B
+08.03.2021 11:26:04.549 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/versionhistory, nodes: 3,  binaries: 0, bytes: 297, bytes: 297 B
+08.03.2021 11:26:04.549 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/fd/af, nodes: 3,  binaries: 0, bytes: 249, bytes: 249 B
+08.03.2021 11:26:04.551 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/fd/fm, nodes: 6,  binaries: 0, bytes: 412, bytes: 412 B
+08.03.2021 11:26:04.551 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/fd/xfaforms, nodes: 3,  binaries: 0, bytes: 249, bytes: 249 B
+08.03.2021 11:26:04.551 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/fd, nodes: 13,  binaries: 0, bytes: 956, bytes: 956 B
+08.03.2021 11:26:04.552 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/commerce/rep:policy, nodes: 2,  binaries: 0, bytes: 121, bytes: 121 B
+08.03.2021 11:26:04.552 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/commerce, nodes: 3,  binaries: 0, bytes: 196, bytes: 196 B
+08.03.2021 11:26:04.552 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/content/dmsearch, nodes: 4,  binaries: 0, bytes: 322, bytes: 322 B
+08.03.2021 11:26:04.552 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/content/dam, nodes: 4,  binaries: 0, bytes: 321, bytes: 321 B
+08.03.2021 11:26:04.553 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /tmp/content, nodes: 9,  binaries: 0, bytes: 754, bytes: 754 B
 ...
 
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy /apps/we-retail-communities/config, bytes: 1.0 KB
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy /apps/we-retail-communities, bytes: 1.1 KB
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy /apps, bytes: 7.5 MB
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy Total nodes in tree /: 288558
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy Total binaries in tree /: 25334
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy Total bytes in tree /: 2.3 GB
-07.03.2021 08:53:29.816 *INFO* [qtp1785043953-1307] calculateDiskUsage.groovy Done: [bytes:2485397161, binaryCount:25334, nodeCount:288558]
+08.03.2021 11:26:04.582 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/rep:policy, nodes: 13,  binaries: 0, bytes: 1198, bytes: 1.2 KB
+08.03.2021 11:26:04.582 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/d, nodes: 6,  binaries: 0, bytes: 670, bytes: 670 B
+08.03.2021 11:26:04.583 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/u, nodes: 5,  binaries: 0, bytes: 401, bytes: 401 B
+08.03.2021 11:26:04.583 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/forms, nodes: 21,  binaries: 0, bytes: 1799, bytes: 1.8 KB
+08.03.2021 11:26:04.584 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/e, nodes: 9,  binaries: 0, bytes: 951, bytes: 951 B
+08.03.2021 11:26:04.584 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups/c, nodes: 10,  binaries: 0, bytes: 1217, bytes: 1.2 KB
+08.03.2021 11:26:04.584 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home/groups, nodes: 368,  binaries: 0, bytes: 39591, bytes: 38.7 KB
+08.03.2021 11:26:04.584 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /home, nodes: 748,  binaries: 8, bytes: 1166512, bytes: 1.1 MB
+08.03.2021 11:26:04.585 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /:clusterConfig, nodes: 1,  binaries: 0, bytes: 36, bytes: 36 B
+08.03.2021 11:26:04.585 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/socialLucene/:data, nodes: 3,  binaries: 2, bytes: 259, bytes: 259 B
+08.03.2021 11:26:04.585 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/socialLucene/:status, nodes: 1,  binaries: 0, bytes: 43, bytes: 43 B
+08.03.2021 11:26:04.586 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/socialLucene/:index-definition, nodes: 23,  binaries: 0, bytes: 1458, bytes: 1.4 KB
+08.03.2021 11:26:04.587 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/socialLucene/indexRules, nodes: 22,  binaries: 0, bytes: 1329, bytes: 1.3 KB
+08.03.2021 11:26:04.587 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/socialLucene, nodes: 50,  binaries: 2, bytes: 3221, bytes: 3.1 KB
+08.03.2021 11:26:04.588 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/workflowDataLucene/:data, nodes: 6,  binaries: 5, bytes: 4607, bytes: 4.5 KB
+08.03.2021 11:26:04.588 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /oak:index/workflowDataLucene/aggregates, nodes: 3,  binaries: 0, bytes: 111, bytes: 111 B
+...
+10.03.2021 11:26:08.384 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/audit, nodes: 32,  binaries: 20, bytes: 6264, bytes: 6.1 KB
+11.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/mailer/status, nodes: 1,  binaries: 0, bytes: 15, bytes: 15 B
+12.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/mailer, nodes: 2,  binaries: 0, bytes: 59, bytes: 59 B
+13.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/granite/asyncjobs, nodes: 3,  binaries: 0, bytes: 207, bytes: 207 B
+14.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/granite, nodes: 4,  binaries: 0, bytes: 253, bytes: 253 B
+15.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/replication/rep:policy, nodes: 2,  binaries: 0, bytes: 96, bytes: 96 B
+16.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/replication/outbox, nodes: 1,  binaries: 0, bytes: 60, bytes: 60 B
+17.03.2021 11:26:08.385 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /var/replication/data, nodes: 2,  binaries: 0, bytes: 120, bytes: 120 B
+...
+08.03.2021 11:26:08.468 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/granite, nodes: 9,  binaries: 0, bytes: 597, bytes: 597 B
+08.03.2021 11:26:08.469 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/core-components-examples/components, nodes: 98,  binaries: 9, bytes: 20022, bytes: 19.6 KB
+08.03.2021 11:26:08.474 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/core-components-examples/clientlibs, nodes: 261,  binaries: 111, bytes: 2333942, bytes: 2.2 MB
+08.03.2021 11:26:08.474 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/core-components-examples, nodes: 360,  binaries: 120, bytes: 2354007, bytes: 2.2 MB
+08.03.2021 11:26:08.474 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/we-retail-communities/config, nodes: 5,  binaries: 2, bytes: 1041, bytes: 1.0 KB
+08.03.2021 11:26:08.474 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps/we-retail-communities, nodes: 6,  binaries: 2, bytes: 1084, bytes: 1.1 KB
+08.03.2021 11:26:08.474 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy /apps, nodes: 5098,  binaries: 1061, bytes: 7819684, bytes: 7.5 MB
+08.03.2021 11:26:08.475 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Total nodes in tree /: 288558
+08.03.2021 11:26:08.475 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Total binaries in tree /: 25338
+08.03.2021 11:26:08.475 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Total bytes in tree /: 2.3 GB
+08.03.2021 11:26:08.475 *INFO* [qtp1785043953-4886] calculateDiskUsage.groovy Done: [bytes:2485401609, binaryCount:25338, nodeCount:288558]
 ```
