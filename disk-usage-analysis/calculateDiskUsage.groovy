@@ -9,7 +9,6 @@ import org.apache.jackrabbit.oak.commons.PathUtils
 import com.google.common.collect.Lists
 import java.util.List
 
-sleepMillis = 0;
 
 log = org.slf4j.LoggerFactory.getLogger("calculateDiskUsage.groovy");
 stop = false;
@@ -38,7 +37,7 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
  } else if(stop) {
     return;
  } else {
-    if(sleepMillis > 0) Thread.sleep(sleepMillis);
+    Thread.sleep(1000);
  }
  
  def counts = [bytes: 0, binaryCount: 0, nodeCount: 1]
@@ -90,7 +89,7 @@ def countNodes(NodeState n, int level, String path = "/", Integer flush = 100000
  } else if (level <= 3) {
   String readableBytes = humanReadableByteCount(counts.bytes, false)
   String binaryCnt = binaries.get();
-  log.info("${path}, bytes: ${readableBytes}")
+     log.info("${path}, nodes: ${counts.nodeCount},  binaries: ${counts.binaryCount}, bytes: ${counts.bytes}, bytes: ${readableBytes}")
  }
 
  return counts
