@@ -23,3 +23,6 @@
 
         sudo -u crx bash -c "nohup bash preextraction.sh" &
 
+To use the pre-extraction store in a running AEM instance during reindexing then...
+
+6. Go to http://host/system/console/configMgr/org.apache.jackrabbit.oak.plugins.blob.datastore.DataStoreTextProviderService and set the Path configuration value to /mnt/preExtraction/store.
