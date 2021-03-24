@@ -26,3 +26,5 @@
 To use the pre-extraction store in a running AEM instance during reindexing then...
 
 6. Go to http://host/system/console/configMgr/org.apache.jackrabbit.oak.plugins.blob.datastore.DataStoreTextProviderService and set the Path configuration value to /mnt/preExtraction/store.
+
+Now when an index that has fulltext indexing enabled (such as damAssetLucene) gets reindexed, then it would read from the pre-extraction files instead of reading the binaries from the datastore.  This greatly optimizes reindexing performance.
