@@ -19,7 +19,7 @@ See [here for instructions](pre-extract-text-lucene.md).
 
 ## Perform Reindexing
 ### 3A. Run online reindexing
-1. (Only applicable if step 2 above Go to http://host/system/console/configMgr/org.apache.jackrabbit.oak.plugins.blob.datastore.DataStoreTextProviderService and set the *Path* configuration value to /mnt/preExtraction/store.
+1. (Only applicable if, step 2, pre-extraction was done) Go to http://host/system/console/configMgr/org.apache.jackrabbit.oak.plugins.blob.datastore.DataStoreTextProviderService and set the *Path* configuration value to /mnt/preExtraction/store.
 2. Go to http://host/crx/de/index.jsp (enable CRXDE if not enabled) and log in as admin
 3. Browse to each of the index nodes that you want to reindex and set property reindex=true.  Here's one example index:
         /oak:index/lucene
