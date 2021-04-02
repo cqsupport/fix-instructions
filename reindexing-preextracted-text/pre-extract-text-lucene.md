@@ -4,11 +4,14 @@
 2. Upload [generatefilelist.sh](generatefilelist.sh), [preextraction.sh](preextraction.sh), [pre-text-extract-lucene-1.0.jar](pre-text-extract-lucene-1.0.jar?raw=true) and [oak-run-1.10.8.jar](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/1.10.8/oak-run-1.10.8.jar) to the AEM Linux server under ```crx-quickstart/opt/helpers/preExtraction```.  Create the ```preExtraction``` folder.
 3. Log into the server via ssh and run the following commands as root (instead of crx as the user id replace with your own environment's aem process user id):
     
-        cd /mnt/crx/author/crx-quickstart/opt/helpers
-        mkdir -p preExtraction/store
-        chown -R crx: preExtraction
-        cd preExtraction
-        sudo -u crx bash -c "nohup bash generatefilelist.sh" &
+        export AEM_PROCESS_USER_ID=crx
+        export AEM_INSTALL_DIRECTORY=/mnt/crx/author
+        cd $AEM_INSTALL_DIRECTORY/crx-quickstart
+        mkdir -p repository/preExtraction/store
+        chown -R ${AEM_PROCESS_USER_ID}: repository/preExtraction
+        cd repository/preExtraction
+        sudo -u $AEM_PROCESS_USER_ID bash -c "nohup bash generatefilelist.sh" &
+
 4. Go to http://host/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DIndexCopier+support+statistics%2Ctype%3DIndexCopierStats and find the ```fsPath``` of the ```/oak:index/lucene``` index.  For example: ```/mnt/crx/author/crx-quickstart/repository/index/lucene-1576519499912```.  Get the timestamp from the fsPath path (e.g. ```1576519499912```) and edit this line in the ```preextraction.sh``` script:
 
     * Before:
