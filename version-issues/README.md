@@ -4,7 +4,7 @@ When deleting versions from Apache Jackrabbit Oak you observe errors in the logs
 java.lang.NullPointerException: null
         at org.apache.jackrabbit.oak.plugins.version.ReadWriteVersionManager.removeVersion(ReadWriteVersionManager.java:210)
 ```
-For the full stack see [error.txt](#file-error-txt) below.
+For the full stack see [error.txt](error.txt).
 
 # Solution
 There are a number of scripts available for validating and fixing Apache Oak version histories.  The steps for running these are below.  
@@ -17,11 +17,11 @@ https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plug
 4. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
 5. Go to http://host/system/console/sc
 6. Select "Groovy" as the language
-7. Copy / paste the contents of script [FixCorruptVersions-OAK-5193.groovy](#file-fixcorruptversions-oak-5193-groovy) to the console and run it - output goes to the error.log by default
-8. Copy / paste the contents of script [FixOrphanedVersions-GRANITE-25586.groovy](#file-fixorphanedversions-granite-25586-groovy) to the console and run it - output goes to the error.log by default
+7. Copy / paste the contents of script [FixCorruptVersions-OAK-5193.groovy](FixCorruptVersions-OAK-5193.groovy) to the console and run it - output goes to the error.log by default
+8. Copy / paste the contents of script [FixOrphanedVersions-GRANITE-25586.groovy](FixOrphanedVersions-GRANITE-25586.groovy) to the console and run it - output goes to the error.log by default
 
 ### B. Fix the cost calculation and optimize the /oak:index/versionStoreIndex
-If you run version purge and see this [error](#file-purge-query-error-txt) then you need to fix the cost calculation of the /oak:index/versionStoreIndex.
+If you run version purge and see this [error](purge-query-error.txt) then you need to fix the cost calculation of the /oak:index/versionStoreIndex.
 1. Go to /crx/de/index.jsp and log in as admin
 2. Browse to /oak:index/versionStoreIndex and set these two properties:
     ```
@@ -43,7 +43,7 @@ If version purge still fails, it might be due to versionable nodes that have mis
    ```
    11.06.2019 13:08:13.006 *ERROR* [Thread-1136] org.apache.jsp.apps.tools.components.checkversions.POST_jsp$VersionCheckThread VERSION ERROR: Node /content/dam/geometrixx-outdoors/activities/hiking/PDP_2_c05.jpg contains a jcr:versionHistory property that points to non-existing node with uuid e98b4045-b145-47d1-8832-3df194ef6e4a
    ```
-6. Copy / paste the contents of script [remove-version-props-from-node.groovy](#file-remove-version-props-from-node-groovy)
+6. Copy / paste the contents of script [remove-version-props-from-node.groovy](remove-version-props-from-node.groovy)
 7. For each node missing a version history, add a line like this one:
     ```
     removeVersionProps("/content/dam/path/to/item/missing/versionhistory/example.pdf")
