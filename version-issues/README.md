@@ -10,9 +10,9 @@ For the full stack see [error.txt](error.txt).
 There are a number of scripts available for validating and fixing Apache Oak version histories.  The steps for running these are below.  
 ### A. Run the repair scripts
 1. Install the groovy script console for apache felix: http://felix.apache.org/documentation/subprojects/apache-felix-script-console-plugin.html
-2. Download these two jars and install them to the /system/console/bundles UI
-https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.6/groovy-all-2.4.6.jar
-https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
+   * Download these two jars and install them to the /system/console/bundles UI
+     https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.6/groovy-all-2.4.6.jar
+     https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
 3. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
 4. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
 5. Go to http://host/system/console/sc
