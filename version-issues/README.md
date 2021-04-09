@@ -13,12 +13,12 @@ There are a number of scripts available for validating and fixing Apache Oak ver
    * Download these two jars and install them to the /system/console/bundles UI
      https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.6/groovy-all-2.4.6.jar
      https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
-3. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
-4. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
-5. Go to http://host/system/console/sc
-6. Select "Groovy" as the language
-7. Copy / paste the contents of script [FixCorruptVersions-OAK-5193.groovy](FixCorruptVersions-OAK-5193.groovy) to the console and run it - output goes to the error.log by default
-8. Copy / paste the contents of script [FixOrphanedVersions-GRANITE-25586.groovy](FixOrphanedVersions-GRANITE-25586.groovy) to the console and run it - output goes to the error.log by default
+2. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
+3. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
+4. Go to http://host/system/console/sc
+5. Select "Groovy" as the language
+6. Copy / paste the contents of script [FixCorruptVersions-OAK-5193.groovy](FixCorruptVersions-OAK-5193.groovy) to the console and run it - output goes to the error.log by default
+7. Copy / paste the contents of script [FixOrphanedVersions-GRANITE-25586.groovy](FixOrphanedVersions-GRANITE-25586.groovy) to the console and run it - output goes to the error.log by default
 
 ### B. Fix the cost calculation and optimize the /oak:index/versionStoreIndex
 If you run version purge and see this [error](purge-query-error.txt) then you need to fix the cost calculation of the /oak:index/versionStoreIndex.
