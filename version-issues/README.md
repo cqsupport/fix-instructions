@@ -9,14 +9,17 @@ For the full stack see [error.txt](error.txt).
 # Solution
 There are a number of scripts available for validating and fixing Apache Oak version histories.  The steps for running these are below.  
 ### A. Run the repair scripts
-1. Install the groovy script console for apache felix: http://felix.apache.org/documentation/subprojects/apache-felix-script-console-plugin.html
-   * Download these two jars and install them to the /system/console/bundles UI
+#### Install the groovy script console for apache felix
+1. Download these two jars
      https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.6/groovy-all-2.4.6.jar
      https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
-2. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
-3. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
-4. Go to http://host/system/console/sc
-5. Select "Groovy" as the language
+2. Go to http://host/system/console/bundles and upload and install the two bundles (check the checkbox to start the bundles)
+3. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
+4. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
+
+#### Run the scripts
+5. Go to http://host/system/console/sc
+6. Select "Groovy" as the language
 6. Copy / paste the contents of script [FixCorruptVersions-OAK-5193.groovy](FixCorruptVersions-OAK-5193.groovy) to the console and run it - output goes to the error.log by default
 7. Copy / paste the contents of script [FixOrphanedVersions-GRANITE-25586.groovy](FixOrphanedVersions-GRANITE-25586.groovy) to the console and run it - output goes to the error.log by default
 
