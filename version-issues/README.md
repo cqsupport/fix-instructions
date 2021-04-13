@@ -26,11 +26,15 @@ There are a number of scripts available for validating and fixing Apache Oak ver
 ### B. Fix the cost calculation and optimize the /oak:index/versionStoreIndex
 If you run version purge and see this [error](purge-query-error.txt) then you need to fix the cost calculation of the /oak:index/versionStoreIndex.
 1. Go to /crx/de/index.jsp and log in as admin
-2. Browse to /oak:index/versionStoreIndex and set these two properties:
+2. Browse to /oak:index/versionStoreIndex
+3. On the bottom right panel in CRXDE, add these three properties to the node:
     ```
     refresh (Boolean) = true
     entryCount (Long) = 2000
     evaluatePathRestrictions (Boolean) = true
+    ```
+    and set (already existing) reindex property to true:
+    ```
     reindex (Boolean) = true
     ```
 3. Save - now monitor the logs for org.apache.jackrabbit.oak.plugins.index to see the progress of reindexing
