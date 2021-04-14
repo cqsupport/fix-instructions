@@ -1,4 +1,4 @@
-How to move the crypto keys in AEM from the JCR to the file system.
+How to move the crypto keys in AEM from the JCR to the file system.  This applies to AEM installations that were upgraded from 6.3 and older versions to 6.4 and 6.5.
 
 1. Log into AEM as admin
 2. Go to http://host/crx/de/index.jsp
