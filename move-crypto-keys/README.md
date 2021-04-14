@@ -15,4 +15,4 @@ For example, on my system this folder is bundle29.
     -Dcom.adobe.granite.crypto.file.disable=false
     ```
 12. Start AEM
-13. Remove the keys from the repository via CRXDE by removing the two properties "hmac" and "master" from the node ```/etc/key```.
+13. Remove the keys from the repository via CRXDE by removing the two properties ```hmac``` and ```master``` from the node ```/etc/key```.
