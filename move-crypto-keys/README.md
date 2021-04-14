@@ -10,7 +10,7 @@ How to move the crypto keys in AEM from the JCR to the file system.  This applie
 8. Stop AEM
 9. Go to ```crx-quickstart/launchpad/felix``` and change directores to the directory ```crx-quickstart/launchpad/felix/bundle${BUNDLE_ID}/data```, where ```${BUNDLE_ID}``` is replaced by the "Bundle Id" value from step 5.
 For example, on my system this folder is ```crx-quickstart/launchpad/felix/bundle29/data```.
-8. Edit the file named ```storage``` in the ```data``` directory, change the value in the file from ```JCR``` to ```Bundle```
+8. Edit the file named ```storage``` in the ```data``` directory, change the value in the file from ```JCR``` to ```Bundle``` by replacing the file with this one [storage](https://raw.githubusercontent.com/cqsupport/fix-instructions/master/move-crypto-keys/storage).
 9. Go to to the directory ```crx-quickstart/launchpad/felix/bundle${FILE_BUNDLE_ID}/data```, where ```${FILE_BUNDLE_ID}``` is replaced by the "Bundle Id" value from step 7 (the crypto.file bundle ID).
 10. Copy the ```master``` and ```hmac``` files from step 3 to this bundle's ```data``` folder.
 11. Edit the AEM startup script so that this additional JVM parameter is set during startup:
