@@ -14,10 +14,6 @@ For example, on my system this folder is ```crx-quickstart/launchpad/felix/bundl
 
 9. Go to to the directory ```crx-quickstart/launchpad/felix/bundle${FILE_BUNDLE_ID}/data```, where ```${FILE_BUNDLE_ID}``` is replaced by the "Bundle Id" value from step 7 (the crypto.file bundle ID).
 10. Copy the ```master``` and ```hmac``` files from step 3 to this bundle's ```data``` folder.
-11. Edit the AEM startup script so that this additional JVM parameter is set during startup:
-    ```
-    -Dcom.adobe.granite.crypto.file.disable=false
-    ```
-12. Start AEM
-13. Remove the keys from the repository via CRXDE by removing the two properties ```hmac``` and ```master``` from the node ```/etc/key```.
-14. Click "Save All" to save
+11. Start AEM
+12. Remove the keys from the repository via CRXDE by removing the two properties ```hmac``` and ```master``` from the node ```/etc/key```.
+13. Click "Save All" to save
