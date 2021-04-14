@@ -5,3 +5,4 @@ Each folder in this git repository contains a set of instructions to fix issues,
 2. [disk-usage-analysis](disk-usage-analysis) Traverse the nodes at the Oak API level and calculate approximate disk usage per path.
 3. [reindexing-preextracted-text](reindexing-preextracted-text) Optimized reindexing steps.
 4. [version-issues](version-issues) Steps to fix most AEM page and asset version corruption and version purge failures.
+5. [move-crypto-keys](move-crypt-keys) Steps to convert from JCR crypto key storage to file system storage of AEM's crypto (hmac and master) keys.  This only applies to systems that were in-place upgrades from AEM 6.3 or earlier to 6.4 or 6.5.
