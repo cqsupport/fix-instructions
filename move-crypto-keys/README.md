@@ -4,7 +4,7 @@ How to move the crypto keys in AEM from the JCR to the file system.
 2. Go to http://host/crx/de/index.jsp
 3. Download the content of the ```master``` and ```hmac``` properties in the ```/etc/key``` node.
 4. Go to http://host/system/console/bundles/com.adobe.granite.crypto 
-5. Copy the Bundle Id number to a text file for reference
+5. Copy the "Bundle Id" number to a text file for reference
 6. Stop AEM
 7. Go to ```crx-quickstart/launchpad/felix``` and locate the directory ```crx-quickstart/launchpad/felix/bundle${BUNDLE_ID}/data```, where ```${BUNDLE_ID}``` is replaced by the "Bundle Id" value from step 5.
 For example, on my system this folder is ```crx-quickstart/launchpad/felix/bundle29/data```.
