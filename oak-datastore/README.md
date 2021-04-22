@@ -3,6 +3,8 @@ The Datastore Garbage Collection is failing with the following error in AEM 6.x:
 ```
 org.apache.jackrabbit.oak.plugins.blob.MarkSweepGarbageCollector Not all repositories have marked references available : [12a6bd36-e502-4ba0-aa9c-060bb4fddd05]
 ```
+# **WARNING**
+If you have a shared datastore then take care to only delete references for instances (or oak-upgrade / crx2oak migration runs) that are no longer active or using the datastore.
 
 # Cause
 This is caused by having more than one repository files in the datastore. Most probably the extra repository file is from another server that has been moved to the datastore for example after a shared datastore has been broken down into 2 independent ones.
