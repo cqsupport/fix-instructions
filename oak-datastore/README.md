@@ -9,10 +9,12 @@ This is caused by having more than one repository files in the datastore. Most p
 
 # Resolution
 1. First, check the invalid repository ID
-2. Go to http://host:port/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+blob+garbage+collection%2Ctype%3DBlobGarbageCollection
-3. Find and open ```org.apache.jackrabbit.oak: Segment node store blob garbage collection (BlobGarbageCollection)```
-4. Find the repositoryID, for example ```ff822b5e-778b-474c-bb09-92e6ab0cb279```.  This indicates the repositoryId of the local instance where the operation runs.
-5. Remove the unnecessary repository files from the datastore. You can identify the faulty one using the creation date. The older ones are the problematic ones.
+2. Go to http://host:port/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+blob+garbage+collection%2Ctype%3DBlobGarbageCollection or go to http://host:port/system/console/jmx and open ```org.apache.jackrabbit.oak: Segment node store blob garbage collection (BlobGarbageCollection)```
+3. Find the repositoryID with a ```*``` to the right of it, for example ```ff822b5e-778b-474c-bb09-92e6ab0cb279 *```.  This indicates the repositoryId of the local instance where the operation runs.
+4. Stop AEM
+5. Log into the server OS
+6. Go to ```crx-quickstart/repository/datastore``` (or the datastore directory you have configured) and delete the unnecessary repository files from the datastore. You can identify the faulty ones using the creation date. The older ones are the problematic ones.
+7. Start AEM
 
 
 # Specified Message
