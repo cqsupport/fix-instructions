@@ -15,8 +15,10 @@ This is caused by having more than one repository files in the datastore. Most p
 3. Find the repositoryID with a ```*``` to the right of it, for example ```ff822b5e-778b-474c-bb09-92e6ab0cb279 *```.  This indicates the repositoryId of the local instance where the operation runs.
 4. Stop AEM
 5. Log into the server OS
-6. Go to ```crx-quickstart/repository/blobids``` (or the datastore directory you have configured) and delete the unnecessary repository files from the datastore. You can identify the faulty ones using the creation date. The older ones are the problematic ones.
-7. Start AEM
+6. Remove the excess refs files:
+   * FileDataStore: Go to ```crx-quickstart/repository/blobids``` (or the datastore directory you have configured) and delete the unnecessary repository files from the datastore. You can identify the faulty ones using the creation date. The older ones are the problematic ones.
+   * S3 and Azure: Go to the blob storage in the cloud service and search for the unnecessary id and delete all refs files that match.  Search for all ids from step 2 that didn't have a `*` next to them.
+8. Start AEM
 
 
 # Specified Message
