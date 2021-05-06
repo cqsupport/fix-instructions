@@ -1,4 +1,14 @@
-How to move the crypto keys in AEM from the JCR to the file system.  This applies to AEM installations that were upgraded from 6.3 and older versions to 6.4 and 6.5.
+# Overview
+In AEM 6.4 and 6.5 the crypto keys that are included in an AEM instance were moved from the Oak repository (under /etc/key) to the file system under `crx-quickstart/launchpad/felix/bundle${BUNDLE_ID}/data` on the file system (where `${BUNDLE_ID}` is the id of the `com.adobe.granite.crypto` bundle).  If you do not move the keys from the repository to the file system then certain features of AEM will not work properly.
+
+For example when using any features that leverage IMS authentication, when the token expires you would get an error like the one below when the system tries to get a refresh token:
+```
+com.adobe.granite.auth.oauth.AccessTokenProvider failed to get access token from authorization server status: 400 response:
+{"error":"invalid_client","error_description":"invalid client_secret parameter"}
+```
+
+# Steps
+To move the crypto keys in AEM from the JCR to the file system follow the steps below.  This applies to AEM installations that were upgraded from 6.3 and older versions to 6.4 or 6.5.
 
 1. Log into AEM as admin
 2. Go to http://host/crx/de/index.jsp
