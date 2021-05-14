@@ -4,9 +4,9 @@ If you have upgraded from an older AEM version and your /oak:index/lucene node d
 To upgrade the AEM /oak:index/lucene index with the proper config for AEM 6.5, please do the following:
 1. Run text pre-extraction - follow steps [here](reindexing-preextracted-text/pre-extract-text-lucene.md)
 2. After all pre-extraction steps are completed, then log into AEM as admin
-3. Go to /crx/de/index.jsp and rename the node /oak:index/lucene to /oak:index/lucene2
-4. Go to /crx/packmgr/index.jsp
-5. Upload and install the attached package cq-6.5-lucene-index-1.0.zip
+3. Go to http://host:port/crx/de/index.jsp and rename the node /oak:index/lucene to /oak:index/lucene2 (then save)
+4. Go to http://host:port/crx/packmgr/index.jsp
+5. Upload and install the attached package [cq-6.5-lucene-index-1.1.zip](cq-6.5-lucene-index-1.1.zip?raw=true)
 6. That will install the newer version of /oak:index/lucene
 7. The new index will start indexing and will use the pre-extracted text as configured in step 1.
 8. Once the indexing is running you would monitor it until the reindex property of /oak:index/lucene gets automatically set to true.
