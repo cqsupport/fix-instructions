@@ -1,5 +1,5 @@
 # Upgrading the /oak:index/lucene index definition
-If you have upgraded from an older AEM version and your /oak:index/lucene node doesn't have ```compatVersion=true``` property then you need to upgrade the index definition.
+If you have upgraded from an older AEM version (e.g. AEM6.1 to 6.5) and your `/oak:index/lucene` node doesn't have ```compatVersion=2``` property then you need to upgrade the index definition.
 
 To upgrade the AEM /oak:index/lucene index with the proper config for AEM 6.5, please do the following:
 1. Run text pre-extraction - follow steps [here](pre-extract-text-lucene.md)
