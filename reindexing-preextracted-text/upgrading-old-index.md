@@ -2,7 +2,7 @@
 If you have upgraded from an older AEM version and your /oak:index/lucene node doesn't have ```compatVersion=true``` property then you need to upgrade the index definition.
 
 To upgrade the AEM /oak:index/lucene index with the proper config for AEM 6.5, please do the following:
-1. Run text pre-extraction - follow steps [here](reindexing-preextracted-text/pre-extract-text-lucene.md)
+1. Run text pre-extraction - follow steps [here](re-extract-text-lucene.md)
 2. After all pre-extraction steps are completed, then log into AEM as admin
 3. Go to http://host:port/crx/de/index.jsp and rename the node /oak:index/lucene to /oak:index/lucene2 (then save)
 4. Go to http://host:port/crx/packmgr/index.jsp
@@ -13,10 +13,10 @@ To upgrade the AEM /oak:index/lucene index with the proper config for AEM 6.5, p
    Here are some docs for monitoring reindexing:
     * https://blogs.perficient.com/2017/04/19/rebuild-indexes-in-aem-with-oak-index-manager/
     * https://experienceleague.adobe.com/docs/experience-manager-64/deploying/deploying/troubleshooting-oak-indexes.html?lang=en#slow-re-indexing
-9. When the indexing of the new /oak:index/lucene is complete then go to /crx/de/index.jsp again.
-10. Browse to the old index /oak:index/lucene2 and set these properties:
-      a. Set entryCount (with type Long) = 99999999999
-      b. Set refresh (with type Boolean) = true
+9. When the indexing of the new `/oak:index/lucene` is complete then go to http://host:port/crx/de/index.jsp again.
+10. Browse to the old index `/oak:index/lucene2` and set these properties:
+      a. Set `entryCount` (with type `Long`) = `99999999999`
+      b. Set `refresh` (with type `Boolean`) = `true`
 11. Save
 12. This effectively avoids the queries from using the old index.  Now you can test with the new index.
 
