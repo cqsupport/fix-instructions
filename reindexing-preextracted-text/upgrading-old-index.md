@@ -9,7 +9,7 @@ To upgrade the AEM /oak:index/lucene index with the proper config for AEM 6.5, p
 5. Upload and install the attached package [cq-6.5-lucene-index-1.1.zip](cq-6.5-lucene-index-1.1.zip?raw=true)
 6. That will install the newer version of /oak:index/lucene
 7. The new index will start indexing and will use the pre-extracted text as configured in step 1.
-8. Once the indexing is running you would monitor it until the reindex property of /oak:index/lucene gets automatically set to true.
+8. Once the indexing is running you would monitor it until the `reindex` property of `/oak:index/lucene` gets automatically set to `false`.
    Here are some docs for monitoring reindexing:
     * https://blogs.perficient.com/2017/04/19/rebuild-indexes-in-aem-with-oak-index-manager/
     * https://experienceleague.adobe.com/docs/experience-manager-64/deploying/deploying/troubleshooting-oak-indexes.html?lang=en#slow-re-indexing
