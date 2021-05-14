@@ -17,7 +17,8 @@ To upgrade the AEM `/oak:index/lucene` index with the proper config for AEM 6.5,
 10. Browse to the old index `/oak:index/lucene2` and set these properties:
       a. Set `entryCount` (with type `Long`) = `99999999999`
       b. Set `refresh` (with type `Boolean`) = `true`
+      This effectively prevents the index from being used without removing it from the system.
 11. Save
-12. This effectively avoids the queries from using the old index.  Now you can test with the new index.
+12. Now you can test with the new index.  Once you confirm it working then it is safe to delete `/oak:index/lucene2` and its corresponding index copy directory under `crx-quickstart/repository/index`.
 
 Note: Please test this in a lower environment and let me know how it works for you.
