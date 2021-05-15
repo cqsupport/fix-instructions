@@ -1,7 +1,7 @@
 
 ## Pre-extract binary-text from old indexes
 1. Log into the server and create the folder ```preExtraction``` under ```crx-quickstart/opt/helpers```, for example ```crx-quickstart/opt/helpers/preExtraction```
-2. Upload [generatefilelist.sh](generatefilelist.sh), [preextraction.sh](preextraction.sh), [pre-text-extract-lucene-1.0.jar](pre-text-extract-lucene-1.0.jar?raw=true) and [oak-run-1.10.8.jar](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/1.10.8/oak-run-1.10.8.jar) to the AEM Linux server under ```crx-quickstart/opt/helpers/preExtraction```.  Create the ```preExtraction``` folder.
+2. Upload [generatefilelist.sh](generatefilelist.sh?raw=true), [preextraction.sh](preextraction.sh?raw=true), [pre-text-extract-lucene-1.0.jar](pre-text-extract-lucene-1.0.jar?raw=true) and [oak-run-1.10.8.jar](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/1.10.8/oak-run-1.10.8.jar) to the AEM Linux server under ```crx-quickstart/opt/helpers/preExtraction```.  Create the ```preExtraction``` folder.
 3. Log into the server via ssh and run the following commands as root (instead of crx as the user id replace with your own environment's aem process user id):
     
         export AEM_PROCESS_USER_ID=crx
