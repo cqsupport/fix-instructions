@@ -1,5 +1,5 @@
 1. Go to http://host:port/system/console/bundles and install these two bundles
-    * http://apache.mirrors.lucidnetworks.net//felix/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
+    * https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole.plugins.scriptconsole/1.0.2/org.apache.felix.webconsole.plugins.scriptconsole-1.0.2.jar
     * https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.9/groovy-all-2.4.9.jar
 2. Go to  http://host/system/console/configMgr/org.apache.sling.jcr.base.internal.LoginAdminWhitelist
 3. Add org.apache.felix.webconsole.plugins.scriptconsole to "Whitelist regexp" and save
