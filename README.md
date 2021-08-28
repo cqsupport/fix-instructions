@@ -6,4 +6,5 @@ Each folder in this git repository contains a set of instructions to fix issues,
 3. [reindexing-preextracted-text](reindexing-preextracted-text) Optimized reindexing steps.
 4. [version-issues](version-issues) Steps to fix most AEM page and asset version corruption and version purge failures.
 5. [move-crypto-keys](move-crypto-keys) Steps to convert from JCR crypto key storage to file system storage of AEM's crypto (hmac and master) keys.  This only applies to systems that were in-place upgrades from AEM 6.3 or earlier to 6.4 or 6.5.
-6. [missing-jcr-content-nodes.md](missing-jcr-content-nodes.md) See how to find pages and assets that are improperly structured (missing jcr:content subnode)
+6. [missing-jcr-content-nodes](missing-jcr-content-nodes.md) See how to find pages and assets that are improperly structured (missing jcr:content subnode)
+7. [CORS](CORS.md) How to allow AEM to accept CORS requests. 
