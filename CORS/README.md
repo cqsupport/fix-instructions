@@ -87,3 +87,4 @@ For details on what CORS (Cross-Origin Resource Sharing) is then see [here](http
     $SITEHOST
     ```
     Output should be similar to step 3.
+6. Repeat the same curl script against the Load Balancer, WAF, CDN, etc.  Basically repeat until you finally get the CORS request working against the actual domain / base URL that the AJAX call would be sent to. 
