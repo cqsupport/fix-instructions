@@ -48,9 +48,9 @@ For details on what CORS (Cross-Origin Resource Sharing) is then see [here](http
 
     These items should be added to the farm config for the allowed request headers `/clientheaders` config - this is in the `/clientheaders` configuration:
     ```
-    Access-Control-Request-Method
-    Access-Control-Request-Headers
-    X-Requested-With
+    "Access-Control-Request-Method"
+    "Access-Control-Request-Headers"
+    "X-Requested-With"
     ```
     
     These items should be added to the farm config for response header caching - this is in the `/cache` -> `/headers` configurations:
