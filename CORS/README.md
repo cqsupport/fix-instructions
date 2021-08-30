@@ -68,7 +68,7 @@ For details on what CORS (Cross-Origin Resource Sharing) is then see [here](http
     "Access-Control-Allow-Methods"
     "Access-Control-Allow-Headers"
     ```
-    To allow OPTIONS requests at dispatcher we add this in the vhost config under <Directory /> (under /etc/conf.d/enabled_vhosts):
+    To allow OPTIONS requests at dispatcher we add this in the vhost config under <Directory /> (for AMS and AEM Cloud - under /etc/conf.d/enabled_vhosts):
     ```
     <Limit OPTIONS>
       Require all granted
