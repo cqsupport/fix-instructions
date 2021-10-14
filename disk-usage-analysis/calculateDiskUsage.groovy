@@ -147,8 +147,7 @@ private getNodeForPath(def rootNodeBuilder, def argpath) {
     if (!elements.isEmpty()) {
      elements.remove(elements.size() - 1);
     }
-   } else
-  if (!PathUtils.denotesCurrent(element)) {
+   } else if (!PathUtils.denotesCurrent(element)) {
    elements.add(element);
   }
  }
