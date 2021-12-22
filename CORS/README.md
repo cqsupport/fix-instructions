@@ -3,7 +3,9 @@ For details on what CORS (Cross-Origin Resource Sharing) is then see [here](http
 
 1. Follow [this documentation](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=en) on the initial configuration.
 2. Follow [this document](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en) as well
-   * Warning: in the CORS configuration on AEM side, make sure you specify a path such as `/content/dam/.*` and `/libs/granite.*` for example for Asset uploads to `/content/dam/assets/folder.initiateUpload.json`.  On the Cloud Service server, all encompassing wildcards such as `.*` will not work (default value).
+   * Warning: in the CORS configuration on AEM side, make sure you specify a path such as `/content/.*` in `allowedpaths`.
+   * On the Cloud Service server, all encompassing wildcards such as `.*` will not work (or leaving it empty which leaves `.*` as the default value).
+   * For example, to allow Asset uploads to `/content/dam/assets/folder.initiateUpload.json` you would configure `allowedpaths="[/content/dam/.*, /libs/granite.*]"`.
 4. Test the configurations directly against a local AEM instance (`SITEHOST` variable should point directly to the AEM publish instance you configured and `ORIGIN` should be the base URL of the site where the AJAX/CORS request will originate from).  You can test it with the curl script below:
     ```   
     #!/bin/bash
