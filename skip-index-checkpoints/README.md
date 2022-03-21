@@ -1,6 +1,6 @@
 
-In certain rare scenarios the Jackrabbit Oak repository could be in a state where an IndexUpdate cycle requires more memory than the system has available.
-This can happen if massive amounts of data are deleted using oak-run console.  When AEM is started it requires too much memory to calculate the diff of the old checkpoint to the HEAD revision of the data on the system.
+In certain rare scenarios, the Jackrabbit Oak repository could be in a state where an IndexUpdate cycle requires more memory than the system has available.
+This can happen if massive amounts of nodes are deleted using oak-run console.  When AEM is started, it requires too much memory to calculate the diff of the old checkpoint to the HEAD revision of the data on the system.  To deal with these situations we can either reindex entirely or skip indexing of the changes that are causing the issue.  The steps below explain how to skip the changes that are causing the memory issues.
 
 ## Process to skip the index update instead of reindexing
 The steps below show how to skip index updates specifically for the "async" indexing lane.
